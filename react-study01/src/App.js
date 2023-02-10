@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from "styled-components";
+const Father = styled.div`
+  display: "flex";
+`;
 
+const Btn = styled.button`
+  color: aqua;
+  background-color: pink;
+  border: 0;
+  border-radius: 15px;
+`;
+
+const Input = styled.input.attrs({ require: true })`
+  background-color: pink;
+`;
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {" "}
+      <Father as="header">
+        <Btn>Log in</Btn>
+        <Btn as="a" href="/">
+          Log in
+        </Btn>
+      </Father>
+      <Father>
+        <Input></Input>
+      </Father>
+    </>
   );
 }
 
