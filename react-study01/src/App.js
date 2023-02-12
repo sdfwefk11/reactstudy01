@@ -8,30 +8,39 @@ const rotationAnimation = keyframes`
     transform: rotate(0deg);
     border-radius: 0px;
   }
+  25%{
+    transform: rotate(72deg);
+    border-radius: 25px;
+  }
   50%{
-    border-radius: 100px;
+    transform: rotate(144deg);
+    border-radius: 50px;
+  }
+  75%{
+    border-radius: 75px;
   }
   100%{
     transform:rotate(360deg);
-    border-radius: 0px;
+    border-radius: 100px;
   }
 `;
 
+const Alpa = styled.span`
+  font-size: 50px;
+`;
+
 const Box = styled.div`
-  height: 200px;
-  width: 200px;
+  height: 100px;
+  width: 100px;
   background-color: cyan;
   display: flex;
-  animation: ${rotationAnimation} 1s linear infinite;
+  animation: ${rotationAnimation} 2s cubic-bezier(0.5, -0.41, 0.51, 1.18)
+    infinite alternate;
   justify-content: center;
   align-items: center;
-  span {
-    font-size: 50px;
+  ${Alpa} {
     &:hover {
-      font-size: 100px;
-    }
-    &:active {
-      opacity: 0;
+      font-size: 75px;
     }
   }
 `;
@@ -40,7 +49,7 @@ function App() {
   return (
     <Father>
       <Box>
-        <span>A</span>
+        <Alpa as="p">E</Alpa>
       </Box>
     </Father>
   );
