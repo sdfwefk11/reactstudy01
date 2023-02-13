@@ -51,6 +51,7 @@ function App() {
       <Box>
         <Alpa as="p">E</Alpa>
       </Box>
+      <Alpa as="p">A</Alpa>
     </Father>
   );
 }
