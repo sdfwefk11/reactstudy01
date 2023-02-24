@@ -7,9 +7,13 @@ const H1 = styled.h1`
 `;
 
 function App() {
+  const onClick = (event: React.MouseEvent<HTMLElement>) => {};
   return (
     <Container>
       <H1>Hello</H1>
+      <form>
+        <button onClick={onClick}>click me</button>
+      </form>
     </Container>
   );
 }
