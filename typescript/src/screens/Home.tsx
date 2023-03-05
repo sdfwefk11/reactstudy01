@@ -4,7 +4,7 @@ import { users } from "./db";
 function Home() {
   return (
     <div>
-      <h1>Users</h1>
+      <h1>Products</h1>
       <ul>
         {users.map((user) => (
           <li key={user.id}>
