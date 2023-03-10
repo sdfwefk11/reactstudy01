@@ -19,6 +19,9 @@ const Coin = styled.li`
   margin-bottom: 10px;
   font-size: 20px;
   font-weight: bold;
+  a {
+    transition: color;
+  }
   &:hover {
     a {
       color: ${(props) => props.theme.accentColor};
