@@ -14,13 +14,14 @@ const CoinsList = styled.ul``;
 const Coin = styled.li`
   background-color: #f7d358;
   color: ${(props) => props.theme.bgColor};
-  padding: 20px;
   border-radius: 13px;
   margin-bottom: 10px;
   font-size: 20px;
   font-weight: bold;
   a {
-    transition: color;
+    padding: 20px;
+    transition: color 0.2s ease-in;
+    display: block;
   }
   &:hover {
     a {
